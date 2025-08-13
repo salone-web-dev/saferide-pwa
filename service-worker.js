@@ -1,4 +1,5 @@
-const CACHE_NAME = "saferide-cache-v3";
+const CACHE_NAME = "saferide-cache-v4";
+
 const urlsToCache = [
   "https://saferide25.free.nf/",
   "https://saferide25.free.nf/assets/css/saferide-style.css",
@@ -17,3 +18,4 @@ self.addEventListener("fetch", event => {
     caches.match(event.request).then(response => response || fetch(event.request))
   );
 });
+
